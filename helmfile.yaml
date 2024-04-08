@@ -1,0 +1,14 @@
+repositories:
+ - name: flame
+   url: https://charts.truecharts.org
+
+releases:
+  - name: myhelloworld
+    chart: ./helloworld
+    installed: false 
+
+  - name: flame
+    chart: truecharts/flame
+    installed: false
+    values:
+      - flame-values.yaml
