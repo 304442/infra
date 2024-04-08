@@ -25,14 +25,11 @@ service:
 securityContext: 
   privileged: true
 
-  #extraVolumeMounts:
-  #  - mountPath: /var/run/docker.sock
-  #    name: ide-claim0
-  #    readOnly: true
-  #    existingClaim: ide-claim0    
-  #  - mountPath: /workspace
-  #    name: ide-claim1
-  #    existingClaim: ide-claim1
+extraVolumeMounts:
+  - mountPath: /workspace
+    name: ide-pv-claim0
+    existingClaim: ide-claim0
   #  - mountPath: /config
-  #    name: ide-claim2
-  #    existingClaim: ide-claim2
+  #    name: ide-pv-claim1
+  #    existingClaim: ide-claim0
+  #    subPath: config

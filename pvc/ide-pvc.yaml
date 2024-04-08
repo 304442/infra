@@ -1,17 +1,17 @@
 apiVersion: v1
-kind: PersistentVolumeClaim
+kind: PersistentVolume
 metadata:
-  creationTimestamp: null
+  name: ide-pv-volume
   labels:
-    io.kompose.service: ide-claim0
-  name: ide-claim0
+    type: local
 spec:
+  storageClassName: manual
+  capacity:
+    storage: 10Gi
   accessModes:
-    - ReadOnlyMany
-  resources:
-    requests:
-      storage: 100Mi
-status: {}
+    - ReadWriteOnce
+  hostPath:
+    path: "/config/workspace"
 
 ---
 
@@ -20,30 +20,14 @@ kind: PersistentVolumeClaim
 metadata:
   creationTimestamp: null
   labels:
-    io.kompose.service: ide-claim1
-  name: ide-claim1
+    io.kompose.service: ide-claim0
+  name: ide-claim0
 spec:
+  storageClassName: manual
   accessModes:
     - ReadWriteOnce
   resources:
     requests:
-      storage: 100Mi
-status: {}
-
---- 
-
-apiVersion: v1
-kind: PersistentVolumeClaim
-metadata:
-  creationTimestamp: null
-  labels:
-    io.kompose.service: ide-claim2
-  name: ide-claim2
-spec:
-  accessModes:
-    - ReadWriteOnce
-  resources:
-    requests:
-      storage: 100Mi
+      storage: 10Gi
 status: {}
 
