@@ -1,6 +1,9 @@
 repositories:
  - name: flame
    url: https://charts.truecharts.org
+ 
+ - name: ollama-helm
+   url: https://otwld.github.io/ollama-helm
 
 releases:
   - name: myhelloworld
@@ -11,4 +14,14 @@ releases:
     chart: truecharts/flame
     installed: false
     values:
-      - flame-values.yaml
+      - chart-values/flame-values.yaml
+
+  - name: ollama
+    chart: ollama-helm/ollama
+    installed: false
+    values:
+      - chart-values/ollama-values.yaml
+
+  - name: llama-webui
+    chart: ./llama-webui
+    installed: false
