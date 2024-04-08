@@ -11,6 +11,9 @@ repositories:
  - name: deploy-code-server
    url: https://code-server-boilerplates.github.io/charts
 
+ - name: groundhog2k
+   url: https://groundhog2k.github.io/helm-charts
+
 releases:
   - name: myhelloworld
     chart: ./helloworld
@@ -44,6 +47,12 @@ releases:
 
   - name: ide
     chart: deploy-code-server/code-server
+    installed: false
+    values:
+      - chart-values/ide-values.yaml  
+        
+  - name: ap-postgres
+    chart: groundhog2k/postgres
     installed: true
     values:
-      - chart-values/ide-values.yaml   
+      - chart-values/ap-postgres-values.yaml  
