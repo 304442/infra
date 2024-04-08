@@ -8,6 +8,9 @@ repositories:
  - name: gitea
    url: https://dl.gitea.io/charts
 
+ - name: deploy-code-server
+   url: https://code-server-boilerplates.github.io/charts
+
 releases:
   - name: myhelloworld
     chart: ./helloworld
@@ -28,10 +31,19 @@ releases:
   - name: llama-webui
     chart: ./llama-webui
     installed: false
-
+    
   - name: gitea
     chart: gitea/gitea
+    installed: false
+    values:
+      - chart-values/gitea-values.yaml   
+
+  - name: maintenance
+    chart: ./maintenance
+    installed: false
+
+  - name: ide
+    chart: deploy-code-server/code-server
     installed: true
     values:
-      - chart-values/gitea-values.yaml
-
+      - chart-values/ide-values.yaml   
