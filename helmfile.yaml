@@ -14,6 +14,12 @@ repositories:
  - name: groundhog2k
    url: https://groundhog2k.github.io/helm-charts
 
+ - name: bitnami 
+   url: https://charts.bitnami.com/bitnami
+
+ - name: meyercharts
+   url: https://mariomeyer.github.io/repo
+
 releases:
   - name: myhelloworld
     chart: ./helloworld
@@ -55,4 +61,18 @@ releases:
     chart: groundhog2k/postgres
     installed: true
     values:
-      - chart-values/ap-postgres-values.yaml  
+      - chart-values/ap-postgres-values.yaml
+
+  - name: ap-redis
+    chart: bitnami/redis 
+    installed: true 
+  
+  - name: ap
+    chart: meyercharts/activepieces
+    installed: true
+    values:
+      - chart-values/ap-values.yaml
+
+
+
+
