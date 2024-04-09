@@ -30,6 +30,13 @@ spec:
       serviceAccountName: {{ include "activepieces.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
+      initContainers:
+        - name: wait-for-postgres
+          image: busybox
+          command: ['sh', '-c', 'while ! nc -z ap-postgres 5432; do echo "Waiting for PostgreSQL"; sleep 1; done']
+        - name: wait-for-redis
+          image: busybox
+          command: ['sh', '-c', 'while ! nc -z ap-redis-master 6379; do echo "Waiting for Redis"; sleep 1; done']
       containers:
         - name: {{ .Chart.Name }}
           securityContext:

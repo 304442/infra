@@ -59,20 +59,15 @@ releases:
         
   - name: ap-postgres
     chart: groundhog2k/postgres
-    installed: true
+    installed: false
     values:
       - chart-values/ap-postgres-values.yaml
 
   - name: ap-redis
     chart: bitnami/redis 
-    installed: true 
+    installed: false 
   
-  - name: ap
-    chart: meyercharts/activepieces
-    installed: true
-    values:
-      - chart-values/ap-values.yaml
-
-
-
+  - name: activepieces
+    chart: ./activepieces
+    installed: false
 
