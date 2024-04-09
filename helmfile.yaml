@@ -84,6 +84,9 @@ releases:
 
   - name: ibga
     chart: ./ibga
-    installed: true
+    installed: false
 
+  - name: glances
+    chart: ./glances
+    installed: true
 
