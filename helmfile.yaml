@@ -78,6 +78,12 @@ releases:
 
   - name: neko
     chart: truecharts/neko
-    installed: true
+    installed: false
     values:
       - chart-values/neko-values.yaml
+
+  - name: ibga
+    chart: ./ibga
+    installed: true
+
+
