@@ -23,6 +23,9 @@ repositories:
  - name: nicholaswilde
    url: https://nicholaswilde.github.io/helm-charts/
 
+ - name: groundhog2k
+   url: https://groundhog2k.github.io/helm-charts/
+
 releases:
   - name: flame
     chart: truecharts/flame
@@ -88,5 +91,17 @@ releases:
 
   - name: glances
     chart: ./glances
-    installed: true
+    installed: false
 
+  - name: prism-db
+    chart: groundhog2k/mariadb
+    installed: false
+    values: 
+      - chart-values/prism-db-values.yaml
+  
+  # this contains both mariadb and photoprism deployment
+  - name: prism
+    chart: truecharts/photoprism
+    installed: true
+    values: 
+      - chart-values/prism-values.yaml
