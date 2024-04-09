@@ -1,0 +1,21 @@
+chromiumImage:
+  pullPolicy: IfNotPresent
+  repository: ghcr.io/m1k1o/neko/chromium
+  tag: 2.8.11@sha256:559dad2a9b1cf27ff7cb032ca2d0750df3a5c7dde023109bc128df224da396e6
+
+neko:
+  ip: "0.0.0.0"
+  auth:
+    user_pass: "123456Eg"
+    admin_pass: "Confirmati0n"
+  proxy: false
+  screen: "1920x1080@30"
+  control_protection: false
+  implicit_control: false
+  locks:
+    []
+    # - control
+    # - login
+    # - file_transfer
+  cors:
+    - "*"

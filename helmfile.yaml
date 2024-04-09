@@ -1,5 +1,5 @@
 repositories:
- - name: flame
+ - name: truecharts
    url: https://charts.truecharts.org
  
  - name: ollama-helm
@@ -20,11 +20,10 @@ repositories:
  - name: meyercharts
    url: https://mariomeyer.github.io/repo
 
-releases:
-  - name: myhelloworld
-    chart: ./helloworld
-    installed: false 
+ - name: nicholaswilde
+   url: https://nicholaswilde.github.io/helm-charts/
 
+releases:
   - name: flame
     chart: truecharts/flame
     installed: false
@@ -71,3 +70,14 @@ releases:
     chart: ./activepieces
     installed: false
 
+  - name: etherpad
+    chart: nicholaswilde/etherpad
+    installed: false
+    values:
+      - chart-values/etherpad-values.yaml
+
+  - name: neko
+    chart: truecharts/neko
+    installed: true
+    values:
+      - chart-values/neko-values.yaml
