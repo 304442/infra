@@ -29,6 +29,9 @@ repositories:
  - name: gabe565 
    url: https://charts.gabe565.com
 
+ - name: pascaliske
+   url: https://charts.pascaliske.dev
+
 releases:
   - name: flame
     chart: truecharts/flame
@@ -111,6 +114,11 @@ releases:
 
   - name: vaultwarden
     chart: gabe565/vaultwarden
-    installed: true
+    installed: false
     values: 
       - chart-values/vaultwarden-values.yaml
+
+  - name: unbound
+    chart: ./unbound
+    installed: true
+
