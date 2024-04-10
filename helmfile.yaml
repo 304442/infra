@@ -26,6 +26,9 @@ repositories:
  - name: groundhog2k
    url: https://groundhog2k.github.io/helm-charts/
 
+ - name: gabe565 
+   url: https://charts.gabe565.com
+
 releases:
   - name: flame
     chart: truecharts/flame
@@ -102,6 +105,12 @@ releases:
   # this contains both mariadb and photoprism deployment
   - name: prism
     chart: truecharts/photoprism
-    installed: true
+    installed: false
     values: 
       - chart-values/prism-values.yaml
+
+  - name: vaultwarden
+    chart: gabe565/vaultwarden
+    installed: true
+    values: 
+      - chart-values/vaultwarden-values.yaml

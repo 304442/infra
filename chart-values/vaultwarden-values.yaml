@@ -1,0 +1,7 @@
+env:
+  WEBSOCKET_ENABLED: "true"
+
+persistence:
+  data:
+    enabled: true
+    type: emptyDir
