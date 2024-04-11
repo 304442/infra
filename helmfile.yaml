@@ -151,4 +151,10 @@ releases:
 
   - name: pinnwand
     chart: ./pinnwand
+    installed: false
+
+  - name: node-red
+    chart: truecharts/node-red
     installed: true
+    values: 
+      - chart-values/nodered-values.yaml
