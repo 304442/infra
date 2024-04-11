@@ -139,12 +139,16 @@ releases:
 
   - name: wireguard
     chart: wireguard/wireguard
-    installed: true
+    installed: false
     values: 
       - chart-values/wireguard-values.yaml
 
   - name: error-pages
     chart: geek-cookbook/error-pages
-    installed: true
+    installed: false
     values: 
       - chart-values/error-pages-values.yaml
+
+  - name: pinnwand
+    chart: ./pinnwand
+    installed: true
