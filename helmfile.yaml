@@ -38,6 +38,9 @@ repositories:
  - name: wireguard
    url: https://bryopsida.github.io/wireguard-chart
 
+ - name: geek-cookbook
+   url: https://geek-cookbook.github.io/charts/
+
 releases:
   - name: flame
     chart: truecharts/flame
@@ -139,3 +142,9 @@ releases:
     installed: true
     values: 
       - chart-values/wireguard-values.yaml
+
+  - name: error-pages
+    chart: geek-cookbook/error-pages
+    installed: true
+    values: 
+      - chart-values/error-pages-values.yaml
