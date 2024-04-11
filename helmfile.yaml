@@ -35,6 +35,9 @@ repositories:
  - name: mojo2600
    url: https://mojo2600.github.io/pihole-kubernetes/
 
+ - name: wireguard
+   url: https://bryopsida.github.io/wireguard-chart
+
 releases:
   - name: flame
     chart: truecharts/flame
@@ -123,10 +126,16 @@ releases:
 
   - name: unbound
     chart: ./unbound
-    installed: true
+    installed: false
 
   - name: pihole
     chart: mojo2600/pihole
     installed: false
     values: 
       - chart-values/pihole-values.yaml
+
+  - name: wireguard
+    chart: wireguard/wireguard
+    installed: true
+    values: 
+      - chart-values/wireguard-values.yaml

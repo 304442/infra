@@ -1,0 +1,22 @@
+replicaCount: 1
+
+labels:
+  private_network: "true"
+
+extraEnv:
+  PUID: "1000"
+  PGID: "1000"
+  SERVERPORT: "51820"
+  PEERS: "3"
+
+securityContext:
+  capabilities:
+    add:
+      - NET_ADMIN
+      - SYS_MODULE
+
+autoscaling:
+  enabled: true
+  minReplicas: 1
+  maxReplicas: 1
+  targetCPUUtilizationPercentage: 75
