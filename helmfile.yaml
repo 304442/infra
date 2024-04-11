@@ -32,6 +32,9 @@ repositories:
  - name: pascaliske
    url: https://charts.pascaliske.dev
 
+ - name: mojo2600
+   url: https://mojo2600.github.io/pihole-kubernetes/
+
 releases:
   - name: flame
     chart: truecharts/flame
@@ -122,3 +125,8 @@ releases:
     chart: ./unbound
     installed: true
 
+  - name: pihole
+    chart: mojo2600/pihole
+    installed: false
+    values: 
+      - chart-values/pihole-values.yaml

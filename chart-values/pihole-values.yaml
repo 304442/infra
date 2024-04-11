@@ -1,0 +1,22 @@
+strategyType: Recreate
+hostname: "pihole"
+
+extraEnvVars:
+  WEBPASSWORD: ""
+
+capabilities: 
+  add:
+  - NET_ADMIN
+
+# -- default upstream DNS 1 server to use
+DNS1: "unbound-dns"
+# -- default upstream DNS 2 server to use
+DNS2: "unbound-dns"
+
+podDnsConfig:
+  enabled: true
+  policy: "None"
+  nameservers:
+  - 127.0.0.1
+  - 1.1.1.1
+
