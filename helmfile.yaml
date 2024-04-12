@@ -41,6 +41,9 @@ repositories:
  - name: geek-cookbook
    url: https://geek-cookbook.github.io/charts/
 
+ - name: codechem 
+   url: https://charts.codechem.com
+
 releases:
   - name: flame
     chart: truecharts/flame
@@ -155,6 +158,10 @@ releases:
 
   - name: node-red
     chart: truecharts/node-red
-    installed: true
+    installed: false
     values: 
       - chart-values/nodered-values.yaml
+ 
+  - name: penpot
+    chart: ./penpot
+    installed: true
