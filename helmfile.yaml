@@ -82,7 +82,7 @@ releases:
 
   - name: ide
     chart: deploy-code-server/code-server
-    installed: false
+    installed: true
     values:
       - chart-values/ide-values.yaml  
         
@@ -217,4 +217,10 @@ releases:
 
   - name: prod-sk
     chart: ./prod-sk
+    installed: false
+
+  - name: live-ide
+    chart: deploy-code-server/code-server
     installed: true
+    values:
+      - chart-values/live-ide-values.yaml  
