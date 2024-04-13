@@ -164,4 +164,8 @@ releases:
  
   - name: penpot
     chart: ./penpot
+    installed: false
+
+  - name: browserless
+    chart: truecharts/browserless-chrome
     installed: true
