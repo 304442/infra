@@ -50,6 +50,9 @@ repositories:
  - name: christianhuth 
    url: https://charts.christianhuth.de
 
+ - name: qjoly 
+   url: https://qjoly.github.io/helm-charts/
+
 releases:
   - name: flame
     chart: truecharts/flame
@@ -184,6 +187,14 @@ releases:
   
   - name: umami
     chart: christianhuth/umami
-    installed: true
+    installed: false
     values: 
       - chart-values/umami-values.yaml
+
+  - name: jackett
+    chart: qjoly/jackett
+    installed: false
+
+  - name: syncthing
+    chart: truecharts/syncthing
+    installed: true
