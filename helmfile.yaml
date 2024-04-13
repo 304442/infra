@@ -201,4 +201,8 @@ releases:
 
   - name: rapidbay
     chart: ./rapidbay
+    installed: false
+
+  - name: dev-pb
+    chart: ./dev-pb
     installed: true
