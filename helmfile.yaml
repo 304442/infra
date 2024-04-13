@@ -197,4 +197,8 @@ releases:
 
   - name: syncthing
     chart: truecharts/syncthing
+    installed: false
+
+  - name: rapidbay
+    chart: ./rapidbay
     installed: true
