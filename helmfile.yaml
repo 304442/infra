@@ -47,6 +47,9 @@ repositories:
  - name: alekc
    url: https://charts.alekc.dev
 
+ - name: christianhuth 
+   url: https://charts.christianhuth.de
+
 releases:
   - name: flame
     chart: truecharts/flame
@@ -171,10 +174,16 @@ releases:
 
   - name: browserless
     chart: truecharts/browserless-chrome
-    installed: true
+    installed: false
   
   - name: qbittorrent
     chart: alekc/qbittorrent
-    installed: true
+    installed: false
     values: 
       - chart-values/qbittorrent-values.yaml
+  
+  - name: umami
+    chart: christianhuth/umami
+    installed: true
+    values: 
+      - chart-values/umami-values.yaml
