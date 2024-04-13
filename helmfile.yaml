@@ -44,6 +44,9 @@ repositories:
  - name: codechem 
    url: https://charts.codechem.com
 
+ - name: alekc
+   url: https://charts.alekc.dev
+
 releases:
   - name: flame
     chart: truecharts/flame
@@ -169,3 +172,9 @@ releases:
   - name: browserless
     chart: truecharts/browserless-chrome
     installed: true
+  
+  - name: qbittorrent
+    chart: alekc/qbittorrent
+    installed: true
+    values: 
+      - chart-values/qbittorrent-values.yaml

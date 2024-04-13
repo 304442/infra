@@ -1,0 +1,21 @@
+env:
+  PUID: "1000"
+  PGID: "1000"
+  TZ: "Europe/London"
+  UMASK_SET: "022"
+  WEBUI_PORT: "8093"
+ 
+persistence: 
+  additionalVolumes:
+    - name: qbittorrent-download-pvc
+      persistentVolumeClaim:
+        claimName: qbittorrent-download-pvc
+
+  additionalMounts:
+    - name: qbittorrent-download-pvc
+      mountPath: /downloads/Completed
+      subPath: Completed
+  
+    - name: qbittorrent-download-pvc
+      mountPath: /downloads/Temp
+      subPath: Temp 
