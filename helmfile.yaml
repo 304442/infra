@@ -209,4 +209,8 @@ releases:
 
   - name: dev-sk
     chart: ./dev-sk
+    installed: false
+
+  - name: prod-pb
+    chart: ./prod-pb
     installed: true
