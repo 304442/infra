@@ -213,4 +213,8 @@ releases:
 
   - name: prod-pb
     chart: ./prod-pb
+    installed: false
+
+  - name: prod-sk
+    chart: ./prod-sk
     installed: true
