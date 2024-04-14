@@ -4,4 +4,6 @@ env:
 persistence:
   data:
     enabled: true
-    type: emptyDir
+    retain: true
+    accessMode: ReadWriteOnce
+    size: 1Gi

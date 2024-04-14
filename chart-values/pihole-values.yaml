@@ -20,5 +20,9 @@ podDnsConfig:
   - 127.0.0.1
   - 1.1.1.1
 
-
+persistentVolumeClaim:
+  enabled: true
+  existingClaim: pihole-claim
+  accessModes:
+    - ReadWriteOnce
 

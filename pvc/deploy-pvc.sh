@@ -8,3 +8,4 @@ kubectl apply -f live-ide-pvc.yaml
 kubectl apply -f qbittorrent-pvc.yaml
 kubectl apply -f ollama-pvc.yaml
 kubectl apply -f activepieces-pvc.yaml
+kubectl apply -f pihole-pvc.yaml
