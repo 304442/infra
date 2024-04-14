@@ -56,29 +56,29 @@ repositories:
 releases:
   - name: flame
     chart: truecharts/flame
-    installed: false
+    installed: true
     values:
       - chart-values/flame-values.yaml
 
   - name: ollama
     chart: ollama-helm/ollama
-    installed: false
+    installed: true
     values:
       - chart-values/ollama-values.yaml
 
   - name: llama-webui
     chart: ./llama-webui
-    installed: false
+    installed: true
     
   - name: gitea
     chart: gitea/gitea
-    installed: false
+    installed: true
     values:
       - chart-values/gitea-values.yaml   
 
   - name: maintenance
     chart: ./maintenance
-    installed: false
+    installed: true
 
   - name: ide
     chart: deploy-code-server/code-server
@@ -88,136 +88,136 @@ releases:
         
   - name: ap-postgres
     chart: groundhog2k/postgres
-    installed: false
+    installed: true
     values:
       - chart-values/ap-postgres-values.yaml
 
   - name: ap-redis
     chart: bitnami/redis 
-    installed: false 
+    installed: true 
   
   - name: activepieces
     chart: ./activepieces
-    installed: false
+    installed: true
 
   - name: etherpad
     chart: nicholaswilde/etherpad
-    installed: false
+    installed: true
     values:
       - chart-values/etherpad-values.yaml
 
   - name: neko
     chart: truecharts/neko
-    installed: false
+    installed: true
     values:
       - chart-values/neko-values.yaml
 
   - name: ibga
     chart: ./ibga
-    installed: false
+    installed: true
 
   - name: glances
     chart: ./glances
-    installed: false
+    installed: true
 
   - name: prism-db
     chart: groundhog2k/mariadb
-    installed: false
+    installed: true
     values: 
       - chart-values/prism-db-values.yaml
   
   # this contains both mariadb and photoprism deployment
   - name: prism
     chart: truecharts/photoprism
-    installed: false
+    installed: true
     values: 
       - chart-values/prism-values.yaml
 
   - name: vaultwarden
     chart: gabe565/vaultwarden
-    installed: false
+    installed: true
     values: 
       - chart-values/vaultwarden-values.yaml
 
   - name: unbound
     chart: ./unbound
-    installed: false
+    installed: true
 
   - name: pihole
     chart: mojo2600/pihole
-    installed: false
+    installed: true
     values: 
       - chart-values/pihole-values.yaml
 
   - name: wireguard
     chart: wireguard/wireguard
-    installed: false
+    installed: true
     values: 
       - chart-values/wireguard-values.yaml
 
   - name: error-pages
     chart: geek-cookbook/error-pages
-    installed: false
+    installed: true
     values: 
       - chart-values/error-pages-values.yaml
 
   - name: pinnwand
     chart: ./pinnwand
-    installed: false
+    installed: true
 
   - name: node-red
     chart: truecharts/node-red
-    installed: false
+    installed: true
     values: 
       - chart-values/nodered-values.yaml
  
   - name: penpot
     chart: ./penpot
-    installed: false
+    installed: true
 
   - name: browserless
     chart: truecharts/browserless-chrome
-    installed: false
+    installed: true
   
   - name: qbittorrent
     chart: alekc/qbittorrent
-    installed: false
+    installed: true
     values: 
       - chart-values/qbittorrent-values.yaml
   
   - name: umami
     chart: christianhuth/umami
-    installed: false
+    installed: true
     values: 
       - chart-values/umami-values.yaml
 
   - name: jackett
     chart: qjoly/jackett
-    installed: false
+    installed: true
 
   - name: syncthing
     chart: truecharts/syncthing
-    installed: false
+    installed: true
 
   - name: rapidbay
     chart: ./rapidbay
-    installed: false
+    installed: true
 
   - name: dev-pb
     chart: ./dev-pb
-    installed: false
+    installed: true
 
   - name: dev-sk
     chart: ./dev-sk
-    installed: false
+    installed: true
 
   - name: prod-pb
     chart: ./prod-pb
-    installed: false
+    installed: true
 
   - name: prod-sk
     chart: ./prod-sk
-    installed: false
+    installed: true
 
   - name: live-ide
     chart: deploy-code-server/code-server

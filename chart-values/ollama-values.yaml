@@ -6,3 +6,7 @@ resources:
 
     # -- CPU limit
     cpu: 100m
+
+persistentVolume:
+  enabled: true
+  existingClaim: "ollama-claim0"
