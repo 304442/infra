@@ -17,8 +17,18 @@ fullnameOverride: ""
 env:
   - name: AP_ENGINE_EXECUTABLE_PATH
     value: dist/packages/engine/main.js
+  - name: AP_API_KEY
+    value: d7fa31d7b31d17a63b074e398031ba8336c4af31020222de25e4c5308b43fa374aec60c6ef4f8cb6e72bf3a563a791a67a769ca553f9a6985f8a892dabb58bb2
   - name: AP_ENVIRONMENT
     value: prod
+  - name: AP_JWT_SECRET
+    value: 53cf0079195a5d876c9c4a73eb9f0bf7b26fdaebafb5b914a5a5d6f187194742
+  - name: AP_ENCRYPTION_KEY
+    value: c0de79c3000fe24cf447e7cd40b60180
+  - name: AP_FRONTEND_URL
+    value: http://localhost:8080
+  - name: AP_WEBHOOK_TIMEOUT_SECONDS
+    value: "30"
   - name: AP_EXECUTION_MODE
     value: UNSANDBOXED
   - name: AP_POSTGRES_DATABASE
@@ -32,7 +42,7 @@ env:
   - name: AP_POSTGRES_USERNAME
     value: activepieces
   - name: AP_REDIS_HOST
-    value: ap-redis-master
+    value: ap-redis
   - name: AP_REDIS_PORT
     value: "6379"
   - name: AP_SANDBOX_RUN_TIME_SECONDS
@@ -40,11 +50,9 @@ env:
   - name: AP_TELEMETRY_ENABLED
     value: "true"
   - name: AP_TEMPLATES_SOURCE_URL
-    value: '"https://cloud.activepieces.com/api/v1/flow-templates"'
+    value: "https://cloud.activepieces.com/api/v1/flow-templates"
   - name: AP_TRIGGER_DEFAULT_POLL_INTERVAL
     value: "5"
-  - name: AP_WEBHOOK_TIMEOUT_SECONDS
-    value: "30"
 
 serviceAccount:
   # Specifies whether a service account should be created
@@ -103,14 +111,14 @@ resources: {}
   #   cpu: 100m
   #   memory: 128Mi
 
-livenessProbe:
-  httpGet:
-    path: /
-    port: http
-readinessProbe:
-  httpGet:
-    path: /
-    port: http
+#livenessProbe:
+#  httpGet:
+#    path: /
+#    port: http
+#readinessProbe:
+#  httpGet:
+#    path: /
+#    port: http
 
 autoscaling:
   enabled: false
