@@ -113,23 +113,16 @@ autoscaling:
   targetCPUUtilizationPercentage: 80
   # targetMemoryUtilizationPercentage: 80
 
-# Additional volumes on the output Deployment definition.
+
 volumes:
-  - name: ibga-claim0
+  - name: ibga-claim
     persistentVolumeClaim:
-      claimName: ibga-claim0
+      claimName: ibga-claim
 
 # Additional volumeMounts on the output Deployment definition.
 volumeMounts:
-  - mountPath: /home/ibg
-    name: ibga-claim0
-    subPath: program
-  - mountPath: /home/ibg_settings
-    name: ibga-claim0
-    subPath: settings
-  - mountPath: /home/ibg_logs
-    name: ibga-claim0
-    subPath: logs
+  - mountPath: /home
+    name: ibga-claim
 
 nodeSelector: {}
 
