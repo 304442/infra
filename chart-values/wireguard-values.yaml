@@ -20,3 +20,20 @@ autoscaling:
   minReplicas: 1
   maxReplicas: 1
   targetCPUUtilizationPercentage: 75
+
+volumes:
+  - name: wireguard-claim0
+    persistentVolumeClaim:
+      claimName: wireguard-claim0
+  - name: wireguard-claim1
+    persistentVolumeClaim:
+      claimName: wireguard-claim1
+
+# -- Passthrough pod volume mounts
+volumeMounts:
+  - mountPath: /config
+    name: wireguard-claim0
+  - mountPath: /lib/modules
+    name: wireguard-claim1
+
+
