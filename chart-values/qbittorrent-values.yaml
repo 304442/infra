@@ -4,6 +4,11 @@ env:
   TZ: "Europe/London"
   UMASK_SET: "022"
   WEBUI_PORT: "8093"
+
+webService:
+  type: ClusterIP
+  port: 8080
+  externalIps: []
  
 persistence: 
   additionalVolumes:
