@@ -1,18 +1,18 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: frontend-ingress
-  namespace: argocd
+  name:  happy-compute-ingress
+  namespace: default
 spec:
   ingressClassName: traefik
   rules:
-  - host: example.ardevops.life
+  - host: sample-1.ardevops.life
     http:
       paths:
-      - path: /
-        pathType: Prefix
+      - pathType: Prefix
+        path: /
         backend:
           service:
-            name: argocd-server
+            name: active-pieces-activepieces
             port:
               number: 80

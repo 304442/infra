@@ -200,6 +200,10 @@ spec:
         valueFiles:
         - $values/chart-values/live-ide-values.yaml
 
+    - repoURL: https://traefik.github.io/charts
+      chart: traefik
+      targetRevision: 28.0.0-rc.1
+
     - repoURL: https://github.com/304442/infra
       targetRevision: HEAD
       ref: values
