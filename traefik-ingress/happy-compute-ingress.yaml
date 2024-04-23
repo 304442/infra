@@ -16,3 +16,14 @@ spec:
             name: active-pieces-activepieces
             port:
               number: 80
+
+  - host: sample-2.ardevops.life
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: charts-testing-01-flame
+            port:
+              number: 10291
