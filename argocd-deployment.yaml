@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: charts-testing-01
+  namespace: argocd
+spec:
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  sources:
+    - repoURL: https://github.com/abdurrehman11/helm-charts-argocd
+      path: charts/chart1
+      targetRevision: HEAD
+    - repoURL: https://github.com/abdurrehman11/helm-charts-argocd
+      path: charts/chart2
+      targetRevision: HEAD
+    - repoURL: https://otwld.github.io/ollama-helm
+      chart: ollama
+      targetRevision: 0.23.0
+      helm:
+        valueFiles:
+        - $values/chart-values/ollama-values.yaml
+    - repoURL: https://github.com/abdurrehman11/helm-charts-argocd
+      targetRevision: HEAD
+      ref: values
