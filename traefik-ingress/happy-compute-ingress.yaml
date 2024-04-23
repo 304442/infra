@@ -50,3 +50,14 @@ spec:
             port:
               number: 3000
 
+  - host: sample-5.ardevops.life
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: charts-testing-01-code-server
+            port:
+              number: 8443
+

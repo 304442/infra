@@ -42,6 +42,7 @@ spec:
       path: charts/maintenance
       targetRevision: HEAD
 
+    # kubectl edit secret charts-testing-01-code-server (get password from secret)
     - repoURL: https://code-server-boilerplates.github.io/charts
       chart: code-server
       targetRevision: 1.0.3
