@@ -39,3 +39,14 @@ spec:
             port:
               number: 8080
 
+  - host: sample-4.ardevops.life
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: charts-testing-01-gitea-http
+            port:
+              number: 3000
+
