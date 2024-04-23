@@ -27,3 +27,15 @@ spec:
             name: charts-testing-01-flame
             port:
               number: 10291
+
+  - host: sample-3.ardevops.life
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: charts-testing-01-llama-webui
+            port:
+              number: 8080
+
