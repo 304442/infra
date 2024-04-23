@@ -11,7 +11,7 @@ neko:
   proxy: false
   screen: "1920x1080@30"
   control_protection: false
-  implicit_control: true
+  implicit_control: false
   locks:
     []
     # - control
