@@ -61,3 +61,13 @@ spec:
             port:
               number: 8443
 
+  - host: sample-6.ardevops.life
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: charts-testing-01-etherpad
+            port:
+              number: 9001
