@@ -1,3 +1,0 @@
----
-env:
-  POSTGRES_PASSWORD: password

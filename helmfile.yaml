@@ -1,7 +1,7 @@
 repositories:
  - name: truecharts
    url: https://charts.truecharts.org
- 
+
  - name: ollama-helm
    url: https://otwld.github.io/ollama-helm
 
@@ -14,7 +14,7 @@ repositories:
  - name: groundhog2k
    url: https://groundhog2k.github.io/helm-charts
 
- - name: bitnami 
+ - name: bitnami
    url: https://charts.bitnami.com/bitnami
 
  - name: meyercharts
@@ -26,7 +26,7 @@ repositories:
  - name: groundhog2k
    url: https://groundhog2k.github.io/helm-charts/
 
- - name: gabe565 
+ - name: gabe565
    url: https://charts.gabe565.com
 
  - name: pascaliske
@@ -41,16 +41,16 @@ repositories:
  - name: geek-cookbook
    url: https://geek-cookbook.github.io/charts/
 
- - name: codechem 
+ - name: codechem
    url: https://charts.codechem.com
 
  - name: alekc
    url: https://charts.alekc.dev
 
- - name: christianhuth 
+ - name: christianhuth
    url: https://charts.christianhuth.de
 
- - name: qjoly 
+ - name: qjoly
    url: https://qjoly.github.io/helm-charts/
 
 releases:
@@ -67,25 +67,25 @@ releases:
       - chart-values/ollama-values.yaml
 
   - name: llama-webui
-    chart: ./llama-webui
+    chart: charts/llama-webui
     installed: true
-    
+
   - name: gitea
     chart: gitea/gitea
     installed: true
     values:
-      - chart-values/gitea-values.yaml   
+      - chart-values/gitea-values.yaml
 
   - name: maintenance
-    chart: ./maintenance
+    chart: charts/maintenance
     installed: true
 
   - name: ide
     chart: deploy-code-server/code-server
     installed: true
     values:
-      - chart-values/ide-values.yaml  
-        
+      - chart-values/ide-values.yaml
+
   - name: ap-postgres
     chart: groundhog2k/postgres
     installed: true
@@ -93,11 +93,11 @@ releases:
       - chart-values/ap-postgres-values.yaml
 
   - name: ap-redis
-    chart: bitnami/redis 
-    installed: true 
-  
+    chart: bitnami/redis
+    installed: true
+
   - name: activepieces
-    chart: ./activepieces
+    chart: charts/activepieces
     installed: true
 
   - name: etherpad
@@ -113,82 +113,82 @@ releases:
       - chart-values/neko-values.yaml
 
   - name: ibga
-    chart: ./ibga
+    chart: charts/ibga
     installed: true
 
   - name: glances
-    chart: ./glances
+    chart: charts/glances
     installed: true
 
   - name: prism-db
     chart: groundhog2k/mariadb
     installed: true
-    values: 
+    values:
       - chart-values/prism-db-values.yaml
-  
+
   # this contains both mariadb and photoprism deployment
   - name: prism
     chart: truecharts/photoprism
     installed: true
-    values: 
+    values:
       - chart-values/prism-values.yaml
 
   - name: vaultwarden
     chart: gabe565/vaultwarden
     installed: true
-    values: 
+    values:
       - chart-values/vaultwarden-values.yaml
 
   - name: unbound
-    chart: ./unbound
+    chart: charts/unbound
     installed: true
 
   - name: pihole
     chart: mojo2600/pihole
     installed: true
-    values: 
+    values:
       - chart-values/pihole-values.yaml
 
   - name: wireguard
     chart: wireguard/wireguard
     installed: true
-    values: 
+    values:
       - chart-values/wireguard-values.yaml
 
   - name: error-pages
     chart: geek-cookbook/error-pages
     installed: true
-    values: 
+    values:
       - chart-values/error-pages-values.yaml
 
   - name: pinnwand
-    chart: ./pinnwand
+    chart: charts/pinnwand
     installed: true
 
   - name: node-red
     chart: truecharts/node-red
     installed: true
-    values: 
+    values:
       - chart-values/nodered-values.yaml
- 
+
   - name: penpot
-    chart: ./penpot
+    chart: charts/penpot
     installed: true
 
   - name: browserless
     chart: truecharts/browserless-chrome
     installed: true
-  
+
   - name: qbittorrent
     chart: alekc/qbittorrent
     installed: true
-    values: 
+    values:
       - chart-values/qbittorrent-values.yaml
-  
+
   - name: umami
     chart: christianhuth/umami
     installed: true
-    values: 
+    values:
       - chart-values/umami-values.yaml
 
   - name: jackett
@@ -200,27 +200,27 @@ releases:
     installed: true
 
   - name: rapidbay
-    chart: ./rapidbay
+    chart: charts/rapidbay
     installed: true
 
   - name: dev-pb
-    chart: ./dev-pb
+    chart: charts/dev-pb
     installed: true
 
   - name: dev-sk
-    chart: ./dev-sk
+    chart: charts/dev-sk
     installed: true
 
   - name: prod-pb
-    chart: ./prod-pb
+    chart: charts/prod-pb
     installed: true
 
   - name: prod-sk
-    chart: ./prod-sk
+    chart: charts/prod-sk
     installed: true
 
   - name: live-ide
     chart: deploy-code-server/code-server
     installed: true
     values:
-      - chart-values/live-ide-values.yaml  
+      - chart-values/live-ide-values.yaml
