@@ -9,6 +9,7 @@ spec:
   ingressClassName: traefik
   tls:
    - hosts:
+       - vaultwarden.happycloudcomputing.com
        - neko.happycloudcomputing.com
        - ibga.happycloudcomputing.com
        - glances.happycloudcomputing.com
@@ -21,6 +22,17 @@ spec:
        - etherpad.happycloudcomputing.com 
      secretName: happy-tls-secret
   rules:
+  - host: vaultwarden.happycloudcomputing.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: charts-testing-01-vaultwarden
+            port:
+              number: 8080
+
   - host: photoprism.happycloudcomputing.com
     http:
       paths:
