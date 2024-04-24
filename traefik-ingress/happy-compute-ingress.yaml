@@ -9,6 +9,8 @@ spec:
   ingressClassName: traefik
   tls:
    - hosts:
+       - browser.happycloudcomputing.com
+       - penpot.happycloudcomputing.com
        - nodered.happycloudcomputing.com  
        - pinnwand.happycloudcomputing.com
        - errorpages.happycloudcomputing.com
@@ -26,6 +28,28 @@ spec:
        - etherpad.happycloudcomputing.com 
      secretName: happy-tls-secret
   rules:
+  - host: browser.happycloudcomputing.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: charts-testing-01-browserless-chrome
+            port:
+              number: 10194
+ 
+  - host: penpot.happycloudcomputing.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: penpot-frontend
+            port:
+              number: 9001
+
   - host: nodered.happycloudcomputing.com
     http:
       paths:
