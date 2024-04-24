@@ -3,8 +3,14 @@ kind: Ingress
 metadata:
   name:  happy-compute-ingress
   namespace: default
+  annotations:
+   cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
   ingressClassName: traefik
+  tls:
+   - hosts:
+       - sample-7.ardevops.life
+     secretName: happy-tls-secret
   rules:
   - host: sample-1.ardevops.life
     http:
@@ -79,6 +85,6 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-neko
+            name: neko
             port:
               number: 10294
