@@ -9,6 +9,7 @@ spec:
   ingressClassName: traefik
   tls:
    - hosts:
+       - qbit.happycloudcomputing.com
        - browser.happycloudcomputing.com
        - penpot.happycloudcomputing.com
        - nodered.happycloudcomputing.com  
@@ -28,6 +29,17 @@ spec:
        - etherpad.happycloudcomputing.com 
      secretName: happy-tls-secret
   rules:
+  - host: qbit.happycloudcomputing.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: charts-testing-01-qbittorrent-webui
+            port:
+              number: 8080
+
   - host: browser.happycloudcomputing.com
     http:
       paths:
