@@ -9,6 +9,7 @@ spec:
   ingressClassName: traefik
   tls:
    - hosts:
+       - pinnwand.happycloudcomputing.com
        - errorpages.happycloudcomputing.com
        - pihole.happycloudcomputing.com
        - vaultwarden.happycloudcomputing.com
@@ -24,6 +25,17 @@ spec:
        - etherpad.happycloudcomputing.com 
      secretName: happy-tls-secret
   rules:
+  - host: pinnwand.happycloudcomputing.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: charts-testing-01-pinnwand
+            port:
+              number: 8000
+
   - host: errorpages.happycloudcomputing.com
     http:
       paths:
