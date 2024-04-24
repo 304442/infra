@@ -24,3 +24,19 @@ persistence:
     - name: qbittorrent-download-pvc
       mountPath: /downloads/Temp
       subPath: Temp 
+
+    - name: qbittorrent-download-pvc
+      mountPath: /config
+      subPath: config
+
+    - name: qbittorrent-download-pvc
+      mountPath: /torrents
+      subPath: torrent-files
+
+    - name: qbittorrent-download-pvc
+      mountPath: /logs
+      subPath: logs
+
+    - name: qbittorrent-download-pvc
+      mountPath: /certs
+      subPath: certs
