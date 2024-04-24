@@ -5,14 +5,6 @@ env:
   UMASK_SET: "022"
   WEBUI_PORT: "8093"
 
-metrics:
-  enabled: true
-  exporter:
-    env:
-      user: "admin"
-      password: "adminadmin"
-      port: 9022
-      logLevel: INFO
 
 webService:
   type: ClusterIP
