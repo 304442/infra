@@ -9,10 +9,10 @@ spec:
   ingressClassName: traefik
   tls:
    - hosts:
-       - sample-7.ardevops.life
+       - neko.happycloudcomputing.com
      secretName: happy-tls-secret
   rules:
-  - host: sample-1.ardevops.life
+  - host: activepc.happycloudcomputing.com
     http:
       paths:
       - pathType: Prefix
@@ -23,7 +23,7 @@ spec:
             port:
               number: 80
 
-  - host: sample-2.ardevops.life
+  - host: flame.happycloudcomputing.com
     http:
       paths:
       - pathType: Prefix
@@ -34,7 +34,7 @@ spec:
             port:
               number: 10291
 
-  - host: sample-3.ardevops.life
+  - host: llama.happycloudcomputing.com
     http:
       paths:
       - pathType: Prefix
@@ -45,7 +45,7 @@ spec:
             port:
               number: 8080
 
-  - host: sample-4.ardevops.life
+  - host: gitea.happycloudcomputing.com
     http:
       paths:
       - pathType: Prefix
@@ -56,7 +56,7 @@ spec:
             port:
               number: 3000
 
-  - host: sample-5.ardevops.life
+  - host: codeserver.happycloudcomputing.com
     http:
       paths:
       - pathType: Prefix
@@ -67,7 +67,7 @@ spec:
             port:
               number: 8443
 
-  - host: sample-6.ardevops.life
+  - host: etherpad.happycloudcomputing.com
     http:
       paths:
       - pathType: Prefix
@@ -78,7 +78,7 @@ spec:
             port:
               number: 9001
 
-  - host: sample-7.ardevops.life
+  - host: neko.happycloudcomputing.com
     http:
       paths:
       - pathType: Prefix
