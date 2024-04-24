@@ -10,8 +10,50 @@ spec:
   tls:
    - hosts:
        - neko.happycloudcomputing.com
+       - ibga.happycloudcomputing.com
+       - glances.happycloudcomputing.com
+       - photoprism.happycloudcomputing.com
+       - activepc.happycloudcomputing.com
+       - flame.happycloudcomputing.com
+       - llama.happycloudcomputing.com
+       - gitea.happycloudcomputing.com
+       - codeserver.happycloudcomputing.com
+       - etherpad.happycloudcomputing.com 
      secretName: happy-tls-secret
   rules:
+  - host: photoprism.happycloudcomputing.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: charts-testing-01-photoprism
+            port:
+              number: 2342
+
+  - host: glances.happycloudcomputing.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: charts-testing-01-glances
+            port:
+              number: 61208
+
+  - host: ibga.happycloudcomputing.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: charts-testing-01-ibga
+            port:
+              number: 5800
+
   - host: activepc.happycloudcomputing.com
     http:
       paths:

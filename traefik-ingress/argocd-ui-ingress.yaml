@@ -3,10 +3,16 @@ kind: Ingress
 metadata:
   name: argocd-ui-ingress
   namespace: argocd
+  annotations:
+   cert-manager.io/cluster-issuer: "letsencrypt-prod"
 spec:
   ingressClassName: traefik
+  tls:
+   - hosts:
+       - argocd.happycloudcomputing.com
+     secretName: happy-tls-secret
   rules:
-  - host: example.ardevops.life
+  - host: argocd.happycloudcomputing.com
     http:
       paths:
       - path: /
