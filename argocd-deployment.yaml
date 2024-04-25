@@ -165,10 +165,14 @@ spec:
       helm:
         valueFiles:
         - $values/chart-values/umami-values.yaml
+    
+    - repoURL: https://github.com/304442/infra
+      path: charts/jackett
+      targetRevision: HEAD
 
-    - repoURL: https://qjoly.github.io/helm-charts/
-      chart: jackett
-      targetRevision: 1.0.0
+#    - repoURL: https://qjoly.github.io/helm-charts/
+#      chart: jackett
+#      targetRevision: 1.0.0
 
     - repoURL: https://charts.truecharts.org
       chart: syncthing
