@@ -46,7 +46,7 @@ spec:
         path: /
         backend:
           service:
-            name: wireguard-ui
+            name: charts-testing-01-wireguard-ui
             port:
               number: 5000
 
@@ -222,7 +222,7 @@ spec:
         path: /
         backend:
           service:
-            name: my-pihole-web
+            name: charts-testing-01-pihole-web
             port:
               number: 80
 
