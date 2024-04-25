@@ -155,6 +155,10 @@ releases:
     values:
       - chart-values/wireguard-values.yaml
 
+  - name: wireguard-ui
+    chart: charts/wireguard-ui
+    installed: true
+
   - name: error-pages
     chart: geek-cookbook/error-pages
     installed: true

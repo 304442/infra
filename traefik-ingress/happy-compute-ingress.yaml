@@ -9,6 +9,7 @@ spec:
   ingressClassName: traefik
   tls:
    - hosts:
+       - wireguard.happycloudcomputing.com
        - liveide.happycloudcomputing.com
        - prodsk.happycloudcomputing.com
        - prodpb.happycloudcomputing.com
@@ -38,6 +39,17 @@ spec:
        - etherpad.happycloudcomputing.com 
      secretName: happy-tls-secret
   rules:
+  - host: wireguard.happycloudcomputing.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: wireguard-ui
+            port:
+              number: 5000
+
   - host: liveide.happycloudcomputing.com
     http:
       paths:
@@ -210,7 +222,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-pihole-web
+            name: my-pihole-web
             port:
               number: 80
 
