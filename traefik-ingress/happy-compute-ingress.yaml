@@ -9,6 +9,12 @@ spec:
   ingressClassName: traefik
   tls:
    - hosts:
+       - liveide.happycloudcomputing.com
+       - prodsk.happycloudcomputing.com
+       - prodpb.happycloudcomputing.com
+       - devsk.happycloudcomputing.com
+       - devpb.happycloudcomputing.com
+       - syncthing.happycloudcomputing.com
        - umami.happycloudcomputing.com
        - rapidbay.happycloudcomputing.com
        - jackett.happycloudcomputing.com
@@ -32,6 +38,72 @@ spec:
        - etherpad.happycloudcomputing.com 
      secretName: happy-tls-secret
   rules:
+  - host: liveide.happycloudcomputing.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: charts-testing-01-code-server
+            port:
+              number: 8443
+
+  - host: prodsk.happycloudcomputing.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: charts-testing-01-prod-sk
+            port:
+              number: 4173
+
+  - host: prodpb.happycloudcomputing.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: charts-testing-01-prod-pb
+            port:
+              number: 8090
+
+  - host: devsk.happycloudcomputing.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: charts-testing-01-dev-sk
+            port:
+              number: 5173
+
+  - host: devpb.happycloudcomputing.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: charts-testing-01-dev-pb
+            port:
+              number: 8090
+
+  - host: syncthing.happycloudcomputing.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: charts-testing-01-syncthing
+            port:
+              number: 8384
+
   - host: umami.happycloudcomputing.com
     http:
       paths:
