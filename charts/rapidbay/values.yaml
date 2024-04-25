@@ -16,9 +16,9 @@ fullnameOverride: ""
 
 env:
   - name: JACKETT_API_KEY
-    value: y7kd4gm4g49uu8g94t03h9gk0ca8ijk0
+    value: mdcx5ux8roin33h9cgpk1eb44k3x098k
   - name: JACKETT_HOST
-    value: jackett:9117
+    value: https://jackett.happycloudcomputing.com
 
 serviceAccount:
   # Specifies whether a service account should be created
