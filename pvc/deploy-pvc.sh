@@ -10,3 +10,4 @@ kubectl apply -f ollama-pvc.yaml
 kubectl apply -f activepieces-pvc.yaml
 kubectl apply -f pihole-pvc.yaml
 kubectl apply -f wireguard-pvc.yaml
+kubectl apply -f jackett-pvc.yaml
