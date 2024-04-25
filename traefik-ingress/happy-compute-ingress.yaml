@@ -9,6 +9,7 @@ spec:
   ingressClassName: traefik
   tls:
    - hosts:
+       - umami.happycloudcomputing.com
        - rapidbay.happycloudcomputing.com
        - jackett.happycloudcomputing.com
        - qbit.happycloudcomputing.com
@@ -31,6 +32,17 @@ spec:
        - etherpad.happycloudcomputing.com 
      secretName: happy-tls-secret
   rules:
+  - host: umami.happycloudcomputing.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: charts-testing-01-umami
+            port:
+              number: 3000
+
   - host: rapidbay.happycloudcomputing.com
     http:
       paths:
