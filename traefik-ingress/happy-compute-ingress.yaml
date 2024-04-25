@@ -9,6 +9,7 @@ spec:
   ingressClassName: traefik
   tls:
    - hosts:
+       - jackett.happycloudcomputing.com
        - qbit.happycloudcomputing.com
        - browser.happycloudcomputing.com
        - penpot.happycloudcomputing.com
@@ -29,6 +30,17 @@ spec:
        - etherpad.happycloudcomputing.com 
      secretName: happy-tls-secret
   rules:
+  - host: jackett.happycloudcomputing.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: charts-testing-01-jackett
+            port:
+              number: 9117
+
   - host: qbit.happycloudcomputing.com
     http:
       paths:
