@@ -45,7 +45,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-code-server
+            name: live-ide
             port:
               number: 8443
 

@@ -202,6 +202,10 @@ spec:
       chart: code-server
       targetRevision: 1.0.3
       helm:
+        releaseName: live-ide
+        parameters:
+        - name: "fullnameOverride"
+          value: live-ide
         valueFiles:
         - $values/chart-values/live-ide-values.yaml
 
