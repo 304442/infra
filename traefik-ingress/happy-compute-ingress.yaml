@@ -46,7 +46,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-wireguard-ui
+            name: happy-computing-wireguard-ui
             port:
               number: 5000
 
@@ -68,7 +68,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-prod-sk
+            name: happy-computing-prod-sk
             port:
               number: 4173
 
@@ -79,7 +79,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-prod-pb
+            name: happy-computing-prod-pb
             port:
               number: 8090
 
@@ -90,7 +90,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-dev-sk
+            name: happy-computing-dev-sk
             port:
               number: 5173
 
@@ -101,7 +101,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-dev-pb
+            name: happy-computing-dev-pb
             port:
               number: 8090
 
@@ -112,7 +112,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-syncthing
+            name: happy-computing-syncthing
             port:
               number: 8384
 
@@ -123,7 +123,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-umami
+            name: happy-computing-umami
             port:
               number: 3000
 
@@ -134,7 +134,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-rapidbay
+            name: happy-computing-rapidbay
             port:
               number: 5000
 
@@ -145,7 +145,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-jackett
+            name: happy-computing-jackett
             port:
               number: 9117
 
@@ -156,7 +156,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-qbittorrent-webui
+            name: happy-computing-qbittorrent-webui
             port:
               number: 8080
 
@@ -167,7 +167,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-browserless-chrome
+            name: happy-computing-browserless-chrome
             port:
               number: 10194
  
@@ -189,7 +189,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-node-red
+            name: happy-computing-node-red
             port:
               number: 1880
 
@@ -200,7 +200,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-pinnwand
+            name: happy-computing-pinnwand
             port:
               number: 8000
 
@@ -211,7 +211,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-error-pages
+            name: happy-computing-error-pages
             port:
               number: 8080
 
@@ -222,7 +222,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-pihole-web
+            name: happy-computing-pihole-web
             port:
               number: 80
 
@@ -233,7 +233,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-vaultwarden
+            name: happy-computing-vaultwarden
             port:
               number: 8080
 
@@ -244,7 +244,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-photoprism
+            name: happy-computing-photoprism
             port:
               number: 2342
 
@@ -255,7 +255,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-glances
+            name: happy-computing-glances
             port:
               number: 61208
 
@@ -266,7 +266,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-ibga
+            name: happy-computing-ibga
             port:
               number: 5800
 
@@ -288,7 +288,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-flame
+            name: happy-computing-flame
             port:
               number: 10291
 
@@ -299,7 +299,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-llama-webui
+            name: happy-computing-llama-webui
             port:
               number: 8080
 
@@ -310,7 +310,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-gitea-http
+            name: happy-computing-gitea-http
             port:
               number: 3000
 
@@ -321,7 +321,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-code-server
+            name: happy-computing-code-server
             port:
               number: 8443
 
@@ -332,7 +332,7 @@ spec:
         path: /
         backend:
           service:
-            name: charts-testing-01-etherpad
+            name: happy-computing-etherpad
             port:
               number: 9001
 
@@ -343,6 +343,6 @@ spec:
         path: /
         backend:
           service:
-            name: neko
+            name: happy-computing-neko
             port:
               number: 10294

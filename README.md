@@ -89,4 +89,31 @@ kubectl apply -f traefik-ingress/happy-compute-ingress.yaml
 
 Access the services at the following URLs,
 
-- 
+- `wireguard.happycloudcomputing.com`
+- `liveide.happycloudcomputing.com`
+- `prodsk.happycloudcomputing.com`
+- `prodpb.happycloudcomputing.com`
+- `devsk.happycloudcomputing.com`
+- `devpb.happycloudcomputing.com`
+- `syncthing.happycloudcomputing.com`
+- `umami.happycloudcomputing.com`
+- `rapidbay.happycloudcomputing.com`
+- `jackett.happycloudcomputing.com`
+- `qbit.happycloudcomputing.com`
+- `browser.happycloudcomputing.com`
+- `penpot.happycloudcomputing.com`
+- `nodered.happycloudcomputing.com`
+- `pinnwand.happycloudcomputing.com`
+- `errorpages.happycloudcomputing.com`
+- `pihole.happycloudcomputing.com`
+- `vaultwarden.happycloudcomputing.com`
+- `neko.happycloudcomputing.com`
+- `ibga.happycloudcomputing.com`
+- `glances.happycloudcomputing.com`
+- `photoprism.happycloudcomputing.com`
+- `activepc.happycloudcomputing.com`
+- `flame.happycloudcomputing.com`
+- `llama.happycloudcomputing.com`
+- `gitea.happycloudcomputing.com`
+- `codeserver.happycloudcomputing.com`
+- `etherpad.happycloudcomputing.com`
