@@ -17,3 +17,65 @@ chmod u+x ./setup_helm.sh
 ./setup_helm.sh
 ```
 
+## Setup ArgoCD and Access UI
+
+To setup argocd, run the below commands,
+```bash
+kubectl create namespace argocd
+kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
+```
+
+- Argocd default username: `admin`
+- To access the password, you have to get it from `argocd-initial-admin-secret` secret. To extract the secret, run the below command and copy the `password` field value,
+
+```bash
+kubectl edit secret argocd-initial-admin-secret -n argocd
+```
+- Now run the command to decode the password and use the decoded passoword to access argocd UI at: `https://argocd.happycloudcomputing.com/`
+```bash
+echo <your-password> | base64 --decode
+```
+
+## Setup Certificate Issuers
+
+- To setup the `lets ecrypt` staging and production cert issuers, run the following commands as required,
+
+```bash
+kubectl apply -f cert-issuers/staging_issuer.yaml
+kubectl apply -f cert-issuers/prod_issuer.yaml
+```
+
+## Setup PV and PVC
+
+- To setup the required pv and pvc, run the following commands as required,
+
+```bash
+kubectl apply -f ./pvc/deploy-pvc.sh
+```
+
+## Deploy All Services on k3s Cluster
+
+- Run the following command to deploy all services `without argocd`,
+
+```bash
+helmfile sync
+```
+
+- Run the following command to deploy all services `with argocd`,
+
+```bash
+kubectl apply -f argocd-deployment.yaml
+```
+
+
+## Deploy Traefik Ingress and Acess Services
+- Run the following command to deploy all services `without argocd`,
+
+```bash
+kubectl apply -f traefik-ingress/argocd-ui-ingress.yaml
+kubectl apply -f traefik-ingress/happy-compute-ingress.yaml
+```
+
+Access the services at the following URLs,
+
+- 
