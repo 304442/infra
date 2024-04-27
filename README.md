@@ -5,6 +5,15 @@ Clone this repo: https://github.com/304442/infra.git and go into root dir `infra
 
 To setup k3s cluster, run the below command,
 ```bash
+chmod u+x ./deploy_k3s_cluster.sh
 ./deploy_k3s_cluster.sh
+```
+
+## Setup Helm and Helmfile
+
+To setup helm and helmfile, run the below command,
+```bash
+chmod u+x ./setup_helm.sh
+./setup_helm.sh
 ```
 

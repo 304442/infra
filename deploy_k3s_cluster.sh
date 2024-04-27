@@ -4,7 +4,7 @@
 curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode=644
 
 # Check k3s service status
-systemctl status k3s
+# systemctl status k3s
 
 # Check kubectl version
 /usr/local/bin/kubectl version
