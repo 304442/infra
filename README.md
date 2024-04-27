@@ -1,6 +1,17 @@
 # Docker to Kubernetes Migration
 Clone this repo: https://github.com/304442/infra.git and go into root dir `infra`
 
+## Setup Contabo using Terraform
+
+Replace the contabo credentials in the `main.tf` inside `terraform` and run the following commands,
+
+```bash
+cd terraform
+terraform init
+terraform plan
+terraform apply
+```
+
 ## Setup Kubernetes k3s Single Node Cluster
 
 To setup k3s cluster, run the below command,
