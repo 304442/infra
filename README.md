@@ -44,6 +44,14 @@ kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
+We need to disable TLS in `argocd deployment` so it can work ingress as described here: https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/#traefik-v22. Run the following commands to disable TLS,
+
+```bash
+kubectl edit deploy argocd-server -n argocd
+kubectl scale deployment argocd-server --replicas=0 -n argocd
+kubectl scale deployment argocd-server --replicas=1 -n argocd
+```
+
 - Argocd default username: `admin`
 - To access the password, you have to get it from `argocd-initial-admin-secret` secret. To extract the secret, run the below command and copy the `password` field value,
 
