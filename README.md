@@ -26,6 +26,8 @@ To setup k3s cluster, run the below command,
 ```bash
 chmod u+x ./deploy_rke2.sh
 ./deploy_rke2.sh
+
+helm uninstall rke2-ingress-nginx -n kube-system
 ```
 
 ## Setup Helm and Helmfile
@@ -46,8 +48,15 @@ kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/st
 
 We need to disable TLS in `argocd deployment` so it can work ingress as described here: https://argo-cd.readthedocs.io/en/stable/operator-manual/ingress/#traefik-v22. Run the following commands to disable TLS,
 
+
 ```bash
 kubectl edit deploy argocd-server -n argocd
+
+```
+
+- Edit the deployment file as per official Official Docs `The API server should be run with TLS disabled. Edit the argocd-server deployment to add the --insecure flag to the argocd-server command or set server.insecure: "true" in the argocd-cmd-params-cm`
+
+```bash
 kubectl scale deployment argocd-server --replicas=0 -n argocd
 kubectl scale deployment argocd-server --replicas=1 -n argocd
 ```
