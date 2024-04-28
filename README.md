@@ -20,6 +20,14 @@ chmod u+x ./deploy_k3s_cluster.sh
 ./deploy_k3s_cluster.sh
 ```
 
+## Deploy and Setup Full Application on k3s Cluster
+
+To setup full application including `all services, helm, traefik ingress and argocd`, run the below command,
+```bash
+chmod u+x ./deploy_full_app.sh
+./deploy_full_app.sh
+```
+
 ## Setup Rke2 Single Node Cluster
 
 To setup k3s cluster, run the below command,
