@@ -60,6 +60,7 @@ echo <your-password> | base64 --decode
 - To setup the `lets ecrypt` staging and production cert issuers, run the following commands as required,
 
 ```bash
+kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/v1.14.5/cert-manager.yaml
 kubectl apply -f cert-issuers/staging_issuer.yaml
 kubectl apply -f cert-issuers/prod_issuer.yaml
 ```
@@ -69,7 +70,7 @@ kubectl apply -f cert-issuers/prod_issuer.yaml
 - To setup the required pv and pvc, run the following commands as required,
 
 ```bash
-kubectl apply -f ./pvc/deploy-pvc.sh
+./pvc/deploy-pvc.sh
 ```
 
 ## Deploy All Services on k3s Cluster
