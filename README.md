@@ -20,6 +20,14 @@ chmod u+x ./deploy_k3s_cluster.sh
 ./deploy_k3s_cluster.sh
 ```
 
+## Setup Rke2 Single Node Cluster
+
+To setup k3s cluster, run the below command,
+```bash
+chmod u+x ./deploy_rke2.sh
+./deploy_rke2.sh
+```
+
 ## Setup Helm and Helmfile
 
 To setup helm and helmfile, run the below command,
