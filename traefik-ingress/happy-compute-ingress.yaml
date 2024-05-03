@@ -189,7 +189,7 @@ spec:
         path: /
         backend:
           service:
-            name: nodered
+            name: node-red
             port:
               number: 1880
 
