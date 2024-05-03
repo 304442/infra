@@ -332,7 +332,7 @@ spec:
         path: /
         backend:
           service:
-            name: happy-computing-etherpad
+            name: etherpad
             port:
               number: 9001
 
