@@ -167,7 +167,7 @@ spec:
         path: /
         backend:
           service:
-            name: happy-computing-browserless-chrome
+            name: browserless-chrome
             port:
               number: 10194
  
@@ -189,7 +189,7 @@ spec:
         path: /
         backend:
           service:
-            name: happy-computing-node-red
+            name: nodered
             port:
               number: 1880
 
@@ -200,7 +200,7 @@ spec:
         path: /
         backend:
           service:
-            name: happy-computing-pinnwand
+            name: pinnwand
             port:
               number: 8000
 
