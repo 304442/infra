@@ -255,7 +255,7 @@ spec:
         path: /
         backend:
           service:
-            name: happy-computing-glances
+            name: glances
             port:
               number: 61208
 
@@ -266,7 +266,7 @@ spec:
         path: /
         backend:
           service:
-            name: happy-computing-ibga
+            name: ibga
             port:
               number: 5800
 
