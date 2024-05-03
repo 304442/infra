@@ -82,7 +82,7 @@ kubectl scale deployment argocd-server --replicas=1 -n argocd
 - To access the password, you have to get it from `argocd-initial-admin-secret` secret. To extract the secret, run the below command and copy the `password` field value,
 
 ```bash
-kubectl edit secret argocd-initial-admin-secret -n argocd
+kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 --d; echo
 ```
 - Now run the command to decode the password and use the decoded passoword to access argocd UI at: `https://argocd.happycloudcomputing.com/`
 ```bash
