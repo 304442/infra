@@ -343,6 +343,6 @@ spec:
         path: /
         backend:
           service:
-            name: happy-computing-neko
+            name: neko
             port:
               number: 10294
