@@ -310,7 +310,7 @@ spec:
         path: /
         backend:
           service:
-            name: happy-computing-gitea-http
+            name: gitea-app-http
             port:
               number: 3000
 
