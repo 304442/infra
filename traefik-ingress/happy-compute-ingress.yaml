@@ -134,7 +134,7 @@ spec:
         path: /
         backend:
           service:
-            name: happy-computing-rapidbay
+            name: rapidbay
             port:
               number: 5000
 
@@ -145,7 +145,7 @@ spec:
         path: /
         backend:
           service:
-            name: happy-computing-jackett
+            name: jackett
             port:
               number: 9117
 
@@ -156,7 +156,7 @@ spec:
         path: /
         backend:
           service:
-            name: happy-computing-qbittorrent-webui
+            name: qbittorrent-webui
             port:
               number: 8080
 
