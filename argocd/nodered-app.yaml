@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: nodered-app
+  name: node-red-app
   namespace: argocd
 spec:
   project: default
@@ -22,10 +22,10 @@ spec:
     chart: node-red
     targetRevision: 18.8.10
     helm:
-      releaseName: nodered
+      releaseName: node-red
       parameters:
       - name: "fullnameOverride"
-        value: nodered
+        value: node-red
       valueFiles:
       - $values/chart-values/nodered-values.yaml
 
