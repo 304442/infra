@@ -321,7 +321,7 @@ spec:
         path: /
         backend:
           service:
-            name: happy-computing-code-server
+            name: code-server
             port:
               number: 8443
 
