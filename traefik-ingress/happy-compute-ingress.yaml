@@ -112,7 +112,7 @@ spec:
         path: /
         backend:
           service:
-            name: happy-computing-syncthing
+            name: syncthing
             port:
               number: 8384
 
@@ -123,7 +123,7 @@ spec:
         path: /
         backend:
           service:
-            name: happy-computing-umami
+            name: umami
             port:
               number: 3000
 
