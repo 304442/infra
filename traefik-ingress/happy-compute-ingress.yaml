@@ -233,7 +233,7 @@ spec:
         path: /
         backend:
           service:
-            name: happy-computing-vaultwarden
+            name: vaultwarden
             port:
               number: 8080
 
