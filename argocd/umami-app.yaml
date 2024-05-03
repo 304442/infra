@@ -30,5 +30,5 @@ spec:
       - $values/chart-values/umami-values.yaml
 
   - repoURL: https://github.com/304442/infra
-      targetRevision: HEAD
-      ref: values
+    targetRevision: HEAD
+    ref: values
