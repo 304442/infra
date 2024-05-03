@@ -19,15 +19,15 @@ spec:
     namespace: default
   sources:
   - repoURL: https://charts.truecharts.org
-      chart: node-red
-      targetRevision: 18.8.10
-      helm:
-         releaseName: nodered
-        parameters:
-        - name: "fullnameOverride"
-          value: nodered
-        valueFiles:
-        - $values/chart-values/nodered-values.yaml
+    chart: node-red
+    targetRevision: 18.8.10
+    helm:
+      releaseName: nodered
+      parameters:
+      - name: "fullnameOverride"
+        value: nodered
+      valueFiles:
+      - $values/chart-values/nodered-values.yaml
 
     - repoURL: https://github.com/304442/infra
       targetRevision: HEAD

@@ -19,10 +19,10 @@ spec:
     namespace: default
   sources:
   - repoURL: https://charts.truecharts.org
-      chart: browserless-chrome
-      targetRevision: 9.8.9
-      helm:
-         releaseName: browserless-chrome
-        parameters:
-        - name: "fullnameOverride"
-          value: browserless-chrome
+    chart: browserless-chrome
+    targetRevision: 9.8.9
+    helm:
+      releaseName: browserless-chrome
+      parameters:
+      - name: "fullnameOverride"
+        value: browserless-chrome
