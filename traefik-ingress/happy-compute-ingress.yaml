@@ -288,7 +288,7 @@ spec:
         path: /
         backend:
           service:
-            name: happy-computing-flame
+            name: flame-app
             port:
               number: 10291
 
@@ -299,7 +299,7 @@ spec:
         path: /
         backend:
           service:
-            name: happy-computing-llama-webui
+            name: llama-app-llama-webui
             port:
               number: 8080
 
