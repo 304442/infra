@@ -277,7 +277,7 @@ spec:
         path: /
         backend:
           service:
-            name: active-pieces-activepieces
+            name: activepieces
             port:
               number: 80
 
