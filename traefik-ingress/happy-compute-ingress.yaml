@@ -9,6 +9,7 @@ spec:
   ingressClassName: traefik
   tls:
    - hosts:
+       - grafana.happycloudcomputing.com
        - prometheus.happycloudcomputing.com
        - wireguard.happycloudcomputing.com
        - liveide.happycloudcomputing.com
@@ -40,6 +41,17 @@ spec:
        - etherpad.happycloudcomputing.com 
      secretName: happy-tls-secret
   rules:
+  - host: grafana.happycloudcomputing.com
+    http:
+      paths:
+      - pathType: Prefix
+        path: /
+        backend:
+          service:
+            name: grafana
+            port:
+              number: 3000
+
   - host: prometheus.happycloudcomputing.com
     http:
       paths:
