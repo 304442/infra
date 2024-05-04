@@ -48,7 +48,8 @@ spec:
         backend:
           service:
             name: prometheus-server
-            port: 80
+            port:
+              number: 80
 
   - host: wireguard.happycloudcomputing.com
     http:
