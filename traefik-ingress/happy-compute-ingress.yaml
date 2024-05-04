@@ -50,7 +50,7 @@ spec:
           service:
             name: grafana
             port:
-              number: 3000
+              number: 80
 
   - host: prometheus.happycloudcomputing.com
     http:
