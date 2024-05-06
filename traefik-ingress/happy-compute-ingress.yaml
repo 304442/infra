@@ -5,7 +5,10 @@ metadata:
   namespace: default
   annotations:
    cert-manager.io/cluster-issuer: "letsencrypt-prod"
-   traefik.ingress.kubernetes.io/router.middlewares: default-error-pages@kubernetescrd,default-secure-header@kubernetescrd
+   traefik.ingress.kubernetes.io/router.middlewares: |
+     default-error-pages@kubernetescrd,
+     default-secure-header@kubernetescrd
+     default-rate-limit@kubernetescrd
 spec:
   ingressClassName: traefik
   tls:
