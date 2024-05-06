@@ -5,7 +5,7 @@ metadata:
   namespace: default
 spec:
   basicAuth:
-    secret: authsecret
+    secret: authsecret2
 
 
 apiVersion: v1
