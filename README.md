@@ -146,7 +146,6 @@ Access the services at the following URLs,
 - `penpot.happycloudcomputing.com`
 - `nodered.happycloudcomputing.com`
 - `pinnwand.happycloudcomputing.com`
-- `errorpages.happycloudcomputing.com`
 - `pihole.happycloudcomputing.com`
 - `vaultwarden.happycloudcomputing.com`
 - `neko.happycloudcomputing.com`

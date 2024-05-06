@@ -26,8 +26,6 @@ spec:
        - penpot.happycloudcomputing.com
        - nodered.happycloudcomputing.com  
        - pinnwand.happycloudcomputing.com
-       - errorpages.happycloudcomputing.com
-       - pihole.happycloudcomputing.com
        - vaultwarden.happycloudcomputing.com
        - neko.happycloudcomputing.com
        - ibga.happycloudcomputing.com
@@ -227,28 +225,6 @@ spec:
             name: pinnwand
             port:
               number: 8000
-
-  - host: errorpages.happycloudcomputing.com
-    http:
-      paths:
-      - pathType: Prefix
-        path: /
-        backend:
-          service:
-            name: happy-computing-error-pages
-            port:
-              number: 8080
-
-  - host: pihole.happycloudcomputing.com
-    http:
-      paths:
-      - pathType: Prefix
-        path: /
-        backend:
-          service:
-            name: pihole-web
-            port:
-              number: 80
 
   - host: vaultwarden.happycloudcomputing.com
     http:
