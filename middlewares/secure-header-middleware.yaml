@@ -7,3 +7,16 @@ spec:
   headers:
     frameDeny: true
     browserXssFilter: true
+    contentTypeNosniff: true
+    forceSTSHeader: true
+    sslRedirect: false
+    stsSeconds: 31536000
+    stsIncludeSubdomains: true
+    stsPreload: true
+    referrerPolicy: strict-origin-when-cross-origin
+    customRequestHeaders:
+      X-Forwarded-Proto: https
+    customResponseHeaders:
+      X-Powered-By: "Redstone"
+      Server: "Server"
+    contentSecurityPolicy: "frame-ancestors'self';"
