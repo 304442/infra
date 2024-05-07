@@ -9,7 +9,7 @@ metadata:
      default-error-pages@kubernetescrd,
      default-secure-header@kubernetescrd,
      default-rate-limit@kubernetescrd,
-     default-basic-auth@kubernetescrd
+     default-geoblock@kubernetescrd
 spec:
   ingressClassName: traefik
   tls:
