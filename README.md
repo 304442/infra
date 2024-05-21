@@ -37,16 +37,6 @@ chmod u+x ./deploy_full_app.sh
 ./deploy_full_app.sh
 ```
 
-## Setup Rke2 Single Node Cluster
-
-To setup k3s cluster, run the below command,
-```bash
-chmod u+x ./deploy_rke2.sh
-./deploy_rke2.sh
-
-helm uninstall rke2-ingress-nginx -n kube-system
-```
-
 ## Setup Helm and Helmfile
 
 To setup helm and helmfile, run the below command,
