@@ -9,10 +9,10 @@ spec:
   ingressClassName: traefik
   tls:
    - hosts:
-       - argocd.happycloudcomputing.com
+       - argocd.{{ .Values.domainName }}
      secretName: happy-tls-secret
   rules:
-  - host: argocd.happycloudcomputing.com
+  - host: argocd.{{ .Values.domainName }}
     http:
       paths:
       - path: /

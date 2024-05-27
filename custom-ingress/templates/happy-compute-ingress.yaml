@@ -14,37 +14,37 @@ spec:
   ingressClassName: traefik
   tls:
    - hosts:
-       - grafana.happycloudcomputing.com
-       - prometheus.happycloudcomputing.com
-       - wireguard.happycloudcomputing.com
-       - liveide.happycloudcomputing.com
-       - prodsk.happycloudcomputing.com
-       - prodpb.happycloudcomputing.com
-       - devsk.happycloudcomputing.com
-       - devpb.happycloudcomputing.com
-       - syncthing.happycloudcomputing.com
-       - umami.happycloudcomputing.com
-       - rapidbay.happycloudcomputing.com
-       - jackett.happycloudcomputing.com
-       - qbit.happycloudcomputing.com
-       - browser.happycloudcomputing.com
-       - penpot.happycloudcomputing.com
-       - nodered.happycloudcomputing.com  
-       - pinnwand.happycloudcomputing.com
-       - vaultwarden.happycloudcomputing.com
-       - neko.happycloudcomputing.com
-       - ibga.happycloudcomputing.com
-       - glances.happycloudcomputing.com
-       - photoprism.happycloudcomputing.com
-       - activepc.happycloudcomputing.com
-       - flame.happycloudcomputing.com
-       - llama.happycloudcomputing.com
-       - gitea.happycloudcomputing.com
-       - codeserver.happycloudcomputing.com
-       - etherpad.happycloudcomputing.com 
+       - grafana.{{ .Values.domainName }}
+       - prometheus.{{ .Values.domainName }}
+       - wireguard.{{ .Values.domainName }}
+       - liveide.{{ .Values.domainName }}
+       - prodsk.{{ .Values.domainName }}
+       - prodpb.{{ .Values.domainName }}
+       - devsk.{{ .Values.domainName }}
+       - devpb.{{ .Values.domainName }}
+       - syncthing.{{ .Values.domainName }}
+       - umami.{{ .Values.domainName }}
+       - rapidbay.{{ .Values.domainName }}
+       - jackett.{{ .Values.domainName }}
+       - qbit.{{ .Values.domainName }}
+       - browser.{{ .Values.domainName }}
+       - penpot.{{ .Values.domainName }}
+       - nodered.{{ .Values.domainName }}  
+       - pinnwand.{{ .Values.domainName }}
+       - vaultwarden.{{ .Values.domainName }}
+       - neko.{{ .Values.domainName }}
+       - ibga.{{ .Values.domainName }}
+       - glances.{{ .Values.domainName }}
+       - photoprism.{{ .Values.domainName }}
+       - activepc.{{ .Values.domainName }}
+       - flame.{{ .Values.domainName }}
+       - llama.{{ .Values.domainName }}
+       - gitea.{{ .Values.domainName }}
+       - codeserver.{{ .Values.domainName }}
+       - etherpad.{{ .Values.domainName }} 
      secretName: happy-tls-secret
   rules:
-  - host: grafana.happycloudcomputing.com
+  - host: grafana.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -55,7 +55,7 @@ spec:
             port:
               number: 80
 
-  - host: prometheus.happycloudcomputing.com
+  - host: prometheus.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -66,7 +66,7 @@ spec:
             port:
               number: 80
 
-  - host: wireguard.happycloudcomputing.com
+  - host: wireguard.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -77,7 +77,7 @@ spec:
             port:
               number: 5000
 
-  - host: liveide.happycloudcomputing.com
+  - host: liveide.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -88,7 +88,7 @@ spec:
             port:
               number: 8443
 
-  - host: prodsk.happycloudcomputing.com
+  - host: prodsk.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -99,7 +99,7 @@ spec:
             port:
               number: 4173
 
-  - host: prodpb.happycloudcomputing.com
+  - host: prodpb.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -110,7 +110,7 @@ spec:
             port:
               number: 8090
 
-  - host: devsk.happycloudcomputing.com
+  - host: devsk.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -121,7 +121,7 @@ spec:
             port:
               number: 5173
 
-  - host: devpb.happycloudcomputing.com
+  - host: devpb.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -132,7 +132,7 @@ spec:
             port:
               number: 8090
 
-  - host: syncthing.happycloudcomputing.com
+  - host: syncthing.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -143,7 +143,7 @@ spec:
             port:
               number: 8384
 
-  - host: umami.happycloudcomputing.com
+  - host: umami.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -154,7 +154,7 @@ spec:
             port:
               number: 3000
 
-  - host: rapidbay.happycloudcomputing.com
+  - host: rapidbay.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -165,7 +165,7 @@ spec:
             port:
               number: 5000
 
-  - host: jackett.happycloudcomputing.com
+  - host: jackett.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -176,7 +176,7 @@ spec:
             port:
               number: 9117
 
-  - host: qbit.happycloudcomputing.com
+  - host: qbit.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -187,7 +187,7 @@ spec:
             port:
               number: 8080
 
-  - host: browser.happycloudcomputing.com
+  - host: browser.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -198,7 +198,7 @@ spec:
             port:
               number: 10194
  
-  - host: penpot.happycloudcomputing.com
+  - host: penpot.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -209,7 +209,7 @@ spec:
             port:
               number: 9001
 
-  - host: nodered.happycloudcomputing.com
+  - host: nodered.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -220,7 +220,7 @@ spec:
             port:
               number: 1880
 
-  - host: pinnwand.happycloudcomputing.com
+  - host: pinnwand.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -231,7 +231,7 @@ spec:
             port:
               number: 8000
 
-  - host: vaultwarden.happycloudcomputing.com
+  - host: vaultwarden.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -242,7 +242,7 @@ spec:
             port:
               number: 8080
 
-  - host: photoprism.happycloudcomputing.com
+  - host: photoprism.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -253,7 +253,7 @@ spec:
             port:
               number: 2342
 
-  - host: glances.happycloudcomputing.com
+  - host: glances.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -264,7 +264,7 @@ spec:
             port:
               number: 61208
 
-  - host: ibga.happycloudcomputing.com
+  - host: ibga.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -275,7 +275,7 @@ spec:
             port:
               number: 5800
 
-  - host: activepc.happycloudcomputing.com
+  - host: activepc.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -286,7 +286,7 @@ spec:
             port:
               number: 80
 
-  - host: flame.happycloudcomputing.com
+  - host: flame.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -297,7 +297,7 @@ spec:
             port:
               number: 10291
 
-  - host: llama.happycloudcomputing.com
+  - host: llama.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -308,7 +308,7 @@ spec:
             port:
               number: 8080
 
-  - host: gitea.happycloudcomputing.com
+  - host: gitea.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -319,7 +319,7 @@ spec:
             port:
               number: 3000
 
-  - host: codeserver.happycloudcomputing.com
+  - host: codeserver.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -330,7 +330,7 @@ spec:
             port:
               number: 8443
 
-  - host: etherpad.happycloudcomputing.com
+  - host: etherpad.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix
@@ -341,7 +341,7 @@ spec:
             port:
               number: 9001
 
-  - host: neko.happycloudcomputing.com
+  - host: neko.{{ .Values.domainName }}
     http:
       paths:
       - pathType: Prefix

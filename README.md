@@ -26,7 +26,7 @@ terraform apply
 To setup k3s cluster, run the below command,
 ```bash
 chmod u+x ./deploy_k3s_cluster.sh
-./deploy_k3s_cluster.sh
+./deploy_k3s_cluster.sh <domina-name>
 ```
 
 ## Deploy and Setup Full Application on k3s Cluster
@@ -34,7 +34,13 @@ chmod u+x ./deploy_k3s_cluster.sh
 To setup full application including `all services, helm, traefik ingress and argocd`, run the below command,
 ```bash
 chmod u+x ./deploy_full_app.sh
-./deploy_full_app.sh
+./deploy_full_app.sh <domain-name>
+```
+
+For example, if you want to deploy your application with domain name `happycloudcomputing.com`, run the following command,
+```bash
+chmod u+x ./deploy_full_app.sh
+./deploy_k3s_cluster.sh happycloudcomputing.com
 ```
 
 ## Setup Helm and Helmfile
