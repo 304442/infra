@@ -81,8 +81,7 @@ kubectl scale deployment argocd-server --replicas=1 -n argocd
 kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}" | base64 --d; echo
 ```
 
-- Access argocd UI at: `https://argocd.happycloudcomputing.com/`
-
+- Access argocd UI at: `https://argocd.<domain-name>/`
 
 ## Setup Certificate Issuers
 
@@ -125,31 +124,27 @@ kubectl apply -f traefik-ingress/argocd-ui-ingress.yaml
 kubectl apply -f traefik-ingress/happy-compute-ingress.yaml
 ```
 
-Access the services at the following URLs,
+Access the services at the following URLs, Replace the `<domain-name>` with the actual domain that you are using,
 
-- `wireguard.happycloudcomputing.com`
-- `liveide.happycloudcomputing.com`
-- `prodsk.happycloudcomputing.com`
-- `prodpb.happycloudcomputing.com`
-- `devsk.happycloudcomputing.com`
-- `devpb.happycloudcomputing.com`
-- `syncthing.happycloudcomputing.com`
-- `umami.happycloudcomputing.com`
-- `rapidbay.happycloudcomputing.com`
-- `jackett.happycloudcomputing.com`
-- `qbit.happycloudcomputing.com`
-- `browser.happycloudcomputing.com`
-- `nodered.happycloudcomputing.com`
-- `pinnwand.happycloudcomputing.com`
-- `pihole.happycloudcomputing.com`
-- `vaultwarden.happycloudcomputing.com`
-- `neko.happycloudcomputing.com`
-- `ibga.happycloudcomputing.com`
-- `glances.happycloudcomputing.com`
-- `photoprism.happycloudcomputing.com`
-- `activepc.happycloudcomputing.com`
-- `flame.happycloudcomputing.com`
-- `llama.happycloudcomputing.com`
-- `gitea.happycloudcomputing.com`
-- `codeserver.happycloudcomputing.com`
-- `etherpad.happycloudcomputing.com`
+- `wireguard.<domain-name>`
+- `liveide.<domain-name>`
+- `syncthing.<domain-name>`
+- `umami.<domain-name>`
+- `rapidbay.<domain-name>`
+- `jackett.<domain-name>`
+- `qbit.<domain-name>`
+- `browser.<domain-name>`
+- `nodered.<domain-name>`
+- `pinnwand.<domain-name>`
+- `pihole.<domain-name>`
+- `vaultwarden.<domain-name>`
+- `neko.<domain-name>`
+- `ibga.<domain-name>`
+- `glances.<domain-name>`
+- `photoprism.<domain-name>`
+- `activepc.<domain-name>`
+- `flame.<domain-name>`
+- `llama.<domain-name>`
+- `gitea.<domain-name>`
+- `codeserver.<domain-name>`
+- `etherpad.<domain-name>`
