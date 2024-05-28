@@ -139,7 +139,6 @@ Access the services at the following URLs,
 - `jackett.happycloudcomputing.com`
 - `qbit.happycloudcomputing.com`
 - `browser.happycloudcomputing.com`
-- `penpot.happycloudcomputing.com`
 - `nodered.happycloudcomputing.com`
 - `pinnwand.happycloudcomputing.com`
 - `pihole.happycloudcomputing.com`
