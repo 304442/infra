@@ -26,7 +26,7 @@ spec:
         - $values/chart-values/ollama-values.yaml
 
     - repoURL: https://github.com/304442/infra
-      path: charts/llama-webui
+      path: services/llama-webui
       targetRevision: HEAD
 
     - repoURL: https://github.com/304442/infra

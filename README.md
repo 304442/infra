@@ -21,34 +21,36 @@ terraform plan
 terraform apply
 ```
 
+## Run all the below commands from `root(infra)` dir,
+
 ## Setup Kubernetes k3s Single Node Cluster
 
 To setup k3s cluster, run the below command,
 ```bash
-chmod u+x ./deploy_k3s_cluster.sh
-./deploy_k3s_cluster.sh <domina-name>
+chmod u+x /scripts/deploy_k3s_cluster.sh
+./scripts/deploy_k3s_cluster.sh
 ```
 
 ## Deploy and Setup Full Application on k3s Cluster
 
 To setup full application including `all services, helm, traefik ingress and argocd`, run the below command,
 ```bash
-chmod u+x ./deploy_full_app.sh
+chmod u+x /scripts/deploy_full_app.sh
 ./deploy_full_app.sh <domain-name>
 ```
 
 For example, if you want to deploy your application with domain name `happycloudcomputing.com`, run the following command,
 ```bash
-chmod u+x ./deploy_full_app.sh
-./deploy_k3s_cluster.sh happycloudcomputing.com
+chmod u+x /scripts/deploy_full_app.sh
+./scripts/deploy_k3s_cluster.sh happycloudcomputing.com
 ```
 
 ## Setup Helm and Helmfile
 
 To setup helm and helmfile, run the below command,
 ```bash
-chmod u+x ./setup_helm.sh
-./setup_helm.sh
+chmod u+x /scripts/setup_helm.sh
+./scripts/setup_helm.sh
 ```
 
 ## Setup ArgoCD and Access UI
@@ -98,7 +100,8 @@ kubectl apply -f cert-issuers/prod_issuer.yaml
 - To setup the required pv and pvc, run the following commands as required,
 
 ```bash
-./pvc/deploy-pvc.sh
+chmod u+x /scripts/deploy-pvc.sh
+./scripts/deploy-pvc.sh
 ```
 
 ## Deploy All Services on k3s Cluster

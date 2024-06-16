@@ -9,8 +9,8 @@ fi
 DOMAIN_NAME=$1
 
 # setup helm and helmfile
-chmod u+x ./setup_helm.sh
-./setup_helm.sh
+chmod u+x ./scripts/setup_helm.sh
+./scripts/setup_helm.sh
 
 # setup argocd
 kubectl create namespace argocd
@@ -21,11 +21,11 @@ kubectl apply -f https://github.com/cert-manager/cert-manager/releases/download/
 kubectl apply -f cert-issuers/prod_issuer.yaml
 
 # setup pv and pvc
-chmod u+x ./pvc/deploy-pvc.sh
-./pvc/deploy-pvc.sh
+chmod u+x ./scripts/deploy-pvc.sh
+./scripts/deploy-pvc.sh
 
 # setup and run application in argocd
-kubectl apply -f argocd-deployment.yaml
+kubectl apply -f argocd/argocd-deployment.yaml
 
 # setup ingress for services
 # kubectl apply -f traefik-ingress/argocd-ui-ingress.yaml
