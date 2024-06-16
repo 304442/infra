@@ -25,9 +25,8 @@ chmod u+x ./scripts/deploy-pvc.sh
 ./scripts/deploy-pvc.sh
 
 # setup and run application in argocd
-kubectl apply -f argocd/argocd-deployment.yaml
+chmod u+x ./scripts/deploy_argocd_apps.sh
+./scripts/deploy_argocd_apps.sh
 
 # setup ingress for services
-# kubectl apply -f traefik-ingress/argocd-ui-ingress.yaml
-# kubectl apply -f traefik-ingress/happy-compute-ingress.yaml
 helm install custom-ingress ./custom-ingress --set domainName=${DOMAIN_NAME}

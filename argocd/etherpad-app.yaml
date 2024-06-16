@@ -27,7 +27,7 @@ spec:
         - name: "fullnameOverride"
           value: etherpad
         valueFiles:
-        - $values/chart-values/etherpad-values.yaml
+        - $values/services/etherpad/etherpad-values.yaml
 
     - repoURL: https://github.com/304442/infra
       targetRevision: HEAD

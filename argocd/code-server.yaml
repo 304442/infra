@@ -27,7 +27,7 @@ spec:
         - name: "fullnameOverride"
           value: code-server
         valueFiles:
-        - $values/chart-values/ide-values.yaml
+        - $values/services/ide/ide-values.yaml
 
     - repoURL: https://code-server-boilerplates.github.io/charts
       chart: code-server
@@ -38,7 +38,7 @@ spec:
         - name: "fullnameOverride"
           value: live-ide
         valueFiles:
-        - $values/chart-values/live-ide-values.yaml
+        - $values/services/live-ide/live-ide-values.yaml
 
     - repoURL: https://github.com/304442/infra
       targetRevision: HEAD

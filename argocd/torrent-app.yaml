@@ -27,7 +27,7 @@ spec:
       - name: "fullnameOverride"
         value: qbittorrent
       valueFiles:
-      - $values/chart-values/qbittorrent-values.yaml
+      - $values/services/qbittorrent/qbittorrent-values.yaml
 
   - repoURL: https://github.com/304442/infra
     path: services/jackett

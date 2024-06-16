@@ -13,4 +13,3 @@ env:
     value: activepieces
   - name: POSTGRES_USER
     value: activepieces
-

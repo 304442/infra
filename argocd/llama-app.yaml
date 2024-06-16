@@ -23,7 +23,7 @@ spec:
       targetRevision: 0.23.0
       helm:
         valueFiles:
-        - $values/chart-values/ollama-values.yaml
+        - $values/services/ollama/ollama-values.yaml
 
     - repoURL: https://github.com/304442/infra
       path: services/llama-webui

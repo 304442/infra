@@ -23,7 +23,7 @@ spec:
       targetRevision: 5.8.9
       helm:
         valueFiles:
-        - $values/chart-values/flame-values.yaml
+        - $values/services/flame/flame-values.yaml
 
     - repoURL: https://github.com/304442/infra
       targetRevision: HEAD
